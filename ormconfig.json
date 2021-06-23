@@ -1,0 +1,14 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "leandro.tavares",
+  "password": "Original01",
+  "database": "NLWTEST",
+  "entities": ["src/entities/*.ts"],
+  "cli": {
+    "migrationsDir": "src/database/migrations",
+    "entitiesDir": "src/entities"
+  },
+  "migrations": ["src/database/migrations/*.ts"]
+}
