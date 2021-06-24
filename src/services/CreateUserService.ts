@@ -16,9 +16,9 @@ class CreateUserService {
       throw new Error("Email incorrect");
     }
 
-    const userAlrreadExixts = await userRepository.findOne({email});
-    console.log(userAlrreadExixts);
-    if(userAlrreadExixts) {
+    const userAlreadExixts = await userRepository.findOne({email});
+    console.log(userAlreadExixts);
+    if(userAlreadExixts) {
       throw new Error("User alread exists");
     }
 
