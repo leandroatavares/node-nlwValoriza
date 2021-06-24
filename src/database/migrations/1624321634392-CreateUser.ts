@@ -3,7 +3,6 @@ import {MigrationInterface, QueryRunner, Table} from 'typeorm';
 export class CreateUser1624321634392 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        //TODO - gearar uuid por generateStrategy
         await queryRunner.createTable(
             new Table({
                 name: 'USERS',
