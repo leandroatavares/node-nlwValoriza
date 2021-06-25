@@ -9,7 +9,7 @@ class CreateTagController {
 
     const tag = await service.execute(name);
 
-    return response.json(tag);
+    return res.json(tag);
   }
 
 }
