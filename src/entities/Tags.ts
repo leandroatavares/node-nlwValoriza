@@ -12,7 +12,7 @@ export class Tags {
 
   @CreateDateColumn()
   created_at: Date;
-  
+
   @UpdateDateColumn()
   updated_at: Date;
 
@@ -21,5 +21,5 @@ export class Tags {
       this.id = uuid();
     }
   }
-  
+
 }

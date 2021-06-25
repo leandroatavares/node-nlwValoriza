@@ -11,5 +11,4 @@ const createTagController = new CreateTagController();
 router.post('/users', createUserConotroller.handle);
 router.post('/tags', ensureAdmin, createTagController.handle);
 
-
 export { router }

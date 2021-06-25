@@ -1,8 +1,7 @@
-import { Request, response, Response } from "express";
+import { Request, Response } from "express";
 import { CreateTagService } from "../services/CreateTagService";
 
 class CreateTagController {
-
   async handle(req: Request, res: Response) {
     const service = new CreateTagService();
     const { name } = req.body;
@@ -11,7 +10,6 @@ class CreateTagController {
 
     return res.json(tag);
   }
-
 }
 
 export { CreateTagController }
