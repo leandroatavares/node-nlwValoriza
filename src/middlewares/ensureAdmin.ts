@@ -1,9 +1,12 @@
 import { NextFunction, Request, Response } from "express";
+import { getCustomRepository } from "typeorm";
+import { UserRrepository } from "../repositories/UserRepository";
 
-export function ensureAdmin(req: Request, res: Response, next: NextFunction) {
-  //TODO: verificar admin por jwt
-  const admin = true;
+export async function ensureAdmin(req: Request, res: Response, next: NextFunction) {
+  const userRepository = getCustomRepository(UserRrepository);
 
+  const { user_id } = req;
+  const { admin } = await userRepository.findOne(user_id);
   if(admin) {
     return next();
   }
